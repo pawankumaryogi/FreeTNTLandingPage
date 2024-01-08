@@ -1,0 +1,38 @@
+.head{
+    float: left;
+    align-items: center;
+    display: flex;
+    width: 1400px;
+    height: 60px;
+    padding-bottom: 0px;
+    padding-left: 70px;
+    margin-left: calc((100% - 1400px) / 2);
+    background-color: rgba(69, 32, 10, 0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+}
+.head li a{
+   color: white;
+
+}
+.menuBlock{
+    display: flex;
+    list-style: none;
+}
+.menu{
+    padding-left: 20px;
+}
+
+.langBlock{
+    float: right;
+    width: auto;
+    border: 1px solid #ffffff;
+    border-radius: 40px;
+    background-color: rgba(0, 0, 0, 0.32);
+    color: white;
+    margin-left: 400px;
+    padding: 5px 15px 5px 15px;
+   align-items: center;
+}

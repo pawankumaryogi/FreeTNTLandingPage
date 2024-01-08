@@ -1,0 +1,20 @@
+.supportCard {
+    position: absolute;
+    height: 447px;
+    width: 416px;
+    background-color: rgb(255, 255, 255);
+    margin-left: 900px;
+    /* margin-bottom: 50px; */
+    /* margin-top: 100px; */
+    transition: position 0.3s ease; /* Add a smooth transition effect */
+  }
+  
+  .supportCard.fixed {
+    position: fixed;
+    top: 25%;
+    /* bottom:10%; */
+    left: 15%;
+    transform: translateX(-50%);
+    margin-bottom: 60px; 
+    /* Additional styling for the fixed position */
+  }

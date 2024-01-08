@@ -1,0 +1,352 @@
+.landingPage {
+    justify-content: center;
+    text-align: center;
+}
+
+.sec2 {
+    width: 1400px;
+    margin: auto;
+    background-image: url(https://static.consciousplanet.org/static/assets/img/bg-graphics.jpg);
+}
+.content{
+    margin-left: 130px;
+    margin-top: -90px;
+}
+
+.youtubeVideosSec {
+    width: 1400px;
+    margin: auto;
+    background-image: url(https://static.consciousplanet.org/static/assets/img/bg-graphics.jpg);
+
+}
+
+.postSec {
+    width: 1400px;
+    height: 540px;
+    margin: auto;
+    display: flex;
+    background-image: url(https://static.consciousplanet.org/static/assets/img/bg-graphics.jpg);
+
+}
+
+.postSecData {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+}
+
+.postSecTitle {
+    font-size: 30px;
+    font-weight: bolder;
+    color: #28231e;
+    margin: auto;
+}
+
+.postData {
+    font-size: 20px;
+    font-weight: 500;
+    /* margin: auto; */
+}
+.templeSecImgAndTextName{
+    text-align: left;
+    padding: 0 10px;
+}
+.ReadMore{
+    color: #ea8500;
+}
+.videoDiv{
+ background-color: white;
+ padding: 0px 0 10px;
+ text-align: left ;
+
+}
+.templeSecImgAndText{
+    /* justify-content: center; */
+    text-align: left;
+}
+
+.templeSecImgAndTextText{
+    /* justify-content: center; */
+    /* text-align: left; */
+    padding: 0px 10px;
+}
+
+.loadMoreButton {
+    background-color: #764324;
+    color: white;
+    height: 35px;
+    display: flex;
+    /* width: 100%; */
+    margin: auto;
+    font-size: 12px;
+    align-items: center;
+    padding:2px 45px;
+    font-weight: bold;
+    border-radius: 2px;
+}
+
+.appealSec {
+    width: 1400px;
+    /* margin: auto; */
+    /* float: left; */
+    /* width: 100%; */
+    margin: auto;
+    background-color: #764324;
+}
+
+.pastGlorySec {
+    float: left;
+    width: 100%;
+    background-color: #040404;
+    padding-left: 150px;
+    padding-right: 644px;
+    padding-top: 60px;
+    padding-bottom: 90px;
+    background-image: url(https://static.consciousplanet.org/static/assets/img/bg-img.jpg);
+}
+
+.footerSec {
+    float: left;
+    width: 100%;
+    background-color: #000;
+    padding-top: 22px;
+    padding-right: calc((100% - 1110px) / 2);
+    padding-left: calc((100% - 1110px) / 2);
+    padding-bottom: 22px;
+}
+
+.hRAndCeSec {
+    width: 1400px;
+    margin: auto;
+    /* float: left; */
+    /* width: 100%; */
+    padding-left: 150px;
+    padding-right: 650px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-image: url(https://static.consciousplanet.org/static/assets/img/bg-graphics.jpg);
+
+}
+
+.getInTouchSec {
+    width: 1400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    /* float: left; */
+    /* width: 100%; */
+    padding-left: 150px;
+    padding-right: 630px;
+    padding-top: 60px;
+    padding-bottom: 30px;
+    background-image: url(https://static.consciousplanet.org/static/assets/img/4498733907_858c1a0945_o%20copy%202@2x.jpg);
+}
+
+.apealLatters {
+    display: flex;
+
+}
+
+.formInput {
+    margin: "10px 10px"
+}
+
+.inputClass {
+
+    width: 445px;
+    height: 50px;
+    margin-bottom: 15px;
+    padding-left: 20px;
+    border-radius: 5px;
+}
+.years{
+   
+     padding-top: 90px;
+    /* justify-content: flex-start; */
+    /* align-items: center; */
+}
+
+
+
+
+.topBannerImg {
+    width: 100%;
+}
+
+.topBannerContainer {
+    width: 1400px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    color: white;
+    /* background-image: url(https://www.datocms-assets.com/109266/1703672985-free-temple-banner.jpg); */
+   
+
+}
+
+.topBannerText {
+    position: absolute;
+    top: 164px;
+    left: 12%;
+    margin: auto;
+    /* text-align: left; */
+    font-size: x-large;
+    font-weight: bolder;
+    /* transform: translate(-50%, -50%); */
+}
+
+.aboutTNT {
+    display: flex;
+    height: 80vh;
+    align-items: center;
+}
+
+.templeTalk {
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 50px;
+    margin-left: 90px;
+    /* Adjust the gap as needed */
+}
+
+
+/* Assuming each YoutubeEmbed has a fixed aspect ratio */
+.templeTalk iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.aboutTNTTextVideo {
+    width: 50%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-left: 150px;
+
+}
+
+.aboutText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin: auto; */
+}
+
+/* .supportCard {
+    position: fixed;
+    height: 447px;
+    width: 416px;
+    background-color: rgb(255, 255, 255);
+    margin-left: 900px;
+    margin-bottom: 1000px;
+    margin-top: 100px;
+} */
+
+.templeCard {
+    height: 50px;
+    width: 80px;
+}
+
+.stateData {
+    width: 1400px;
+    margin: auto;
+    background-image: url(https://static.consciousplanet.org/static/assets/img/4498733907_858c1a0945_o%20copy%202@2x.jpg);
+}
+
+.stateDataTitle {
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+}
+
+.templeBlock {
+    display: flex;
+    max-width: 65%;
+    margin-left: 90px;
+}
+
+.templeData {
+    display: flex;
+    flex-direction: column;
+    margin: auto 30px auto;
+    align-items: flex-start;
+    max-width: 50%;
+}
+
+.number {
+    font-size: 30px;
+    font-weight: bolder;
+    color: white;
+}
+
+.name {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+.templeSecImgAndTextName {
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+
+.text {
+    font-size: 15px;
+    color: white;
+}
+
+.templeSecImgAndTextText {
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+}
+
+.stateDataTitle {
+    max-width: 50%;
+}
+
+.storySec {
+    width: 1400px;
+    margin: auto;
+    background-image: url(https://static.consciousplanet.org/static/assets/img/4498733907_858c1a0945_o%20copy%202@2x.jpg);
+
+}
+
+.latterHeading {
+    font-size: medium;
+    font-weight: bold;
+    color: white;
+}
+
+.templeSecImgAndText {
+    width: 1400px;
+    margin: auto;
+    display: flex;
+    max-width: 50%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    padding: 20px 20px 20px 10px;
+    margin-bottom: 20px;
+    margin-left: 80px;
+
+
+}
+
+.ReadMore {
+    display: flex;
+    justify-content: end;
+    color: #5d2a08;
+}
+
+.storeSecTitle {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 80px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
