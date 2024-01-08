@@ -360,7 +360,7 @@ const LandingPage = () => {
           <div className="videoDiv">
             <YoutubeEmbed
               embedId="lua5F0T3m70"
-              title="lua5F0T3m70"
+              title="Free Hindu Temples From Govt Control"
               className="templeTalkVideos"
             />
           </div>
