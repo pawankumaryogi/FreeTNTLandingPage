@@ -8,7 +8,8 @@
     margin: auto;
     background-image: url(https://static.consciousplanet.org/static/assets/img/bg-graphics.jpg);
 }
-.content{
+
+.content {
     margin-left: 130px;
     margin-top: -90px;
 }
@@ -47,25 +48,29 @@
     font-weight: 500;
     /* margin: auto; */
 }
-.templeSecImgAndTextName{
+
+.templeSecImgAndTextName {
     text-align: left;
     padding: 0 10px;
 }
-.ReadMore{
+
+.ReadMore {
     color: #ea8500;
 }
-.videoDiv{
- background-color: white;
- padding: 0px 0 10px;
- text-align: left ;
+
+.videoDiv {
+    background-color: white;
+    padding: 0px 0 10px;
+    text-align: left;
 
 }
-.templeSecImgAndText{
+
+.templeSecImgAndText {
     /* justify-content: center; */
     text-align: left;
 }
 
-.templeSecImgAndTextText{
+.templeSecImgAndTextText {
     /* justify-content: center; */
     /* text-align: left; */
     padding: 0px 10px;
@@ -80,7 +85,7 @@
     margin: auto;
     font-size: 12px;
     align-items: center;
-    padding:2px 45px;
+    padding: 2px 45px;
     font-weight: bold;
     border-radius: 2px;
 }
@@ -159,9 +164,10 @@
     padding-left: 20px;
     border-radius: 5px;
 }
-.years{
-   
-     padding-top: 90px;
+
+.years {
+
+    padding-top: 90px;
     /* justify-content: flex-start; */
     /* align-items: center; */
 }
@@ -173,6 +179,14 @@
     width: 100%;
 }
 
+.wordLimit {
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+}
+
 .topBannerContainer {
     width: 1400px;
     margin: auto;
@@ -180,7 +194,7 @@
     justify-content: center;
     color: white;
     /* background-image: url(https://www.datocms-assets.com/109266/1703672985-free-temple-banner.jpg); */
-   
+
 
 }
 
@@ -251,6 +265,7 @@
 
 .stateData {
     width: 1400px;
+    padding-bottom: 55px;
     margin: auto;
     background-image: url(https://static.consciousplanet.org/static/assets/img/4498733907_858c1a0945_o%20copy%202@2x.jpg);
 }
@@ -259,12 +274,14 @@
     font-size: 30px;
     font-weight: bold;
     color: white;
+    padding-top: 35px;
 }
 
 .templeBlock {
     display: flex;
     max-width: 65%;
     margin-left: 90px;
+    padding-top: 35px;
 }
 
 .templeData {
@@ -301,6 +318,14 @@
 .templeSecImgAndTextText {
     font-size: 15px;
     color: rgb(0, 0, 0);
+    overflow: hidden;
+    /* height: 90px; */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+
+
+
 }
 
 .stateDataTitle {
@@ -342,7 +367,7 @@
 }
 
 .storeSecTitle {
-    
+
     display: flex;
     flex-direction: column;
     align-items: flex-start;

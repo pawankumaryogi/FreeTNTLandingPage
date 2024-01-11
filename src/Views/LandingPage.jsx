@@ -5,14 +5,21 @@ import YoutubeEmbed from "./YoutubeVideo";
 import SupportCard from "./SupportCard";
 let topBanner =
   data.data.allLandingPages[0].body[0].sectionContent[0].bannerSlides[0];
+let sectionContent = data.data.allLandingPages[0].body[1].sectionContent[0];
 let topBannerImg = topBanner.image.url;
 let title = topBanner.title;
-// let subText = topBanner.subtext.value.document.children[0].value;
-// console.log(subText)
+let subText = topBanner.subtext.value.document.children[0].children[0].value;
+// console.log(subText, "subtext");
 
-console.log(topBannerImg);
+// console.log(topBannerImg);
 
-console.log(title);
+// console.log(title);
+let videoCount = 0;
+const extractVideoId = (youtubeLink) => {
+  const match = youtubeLink.match(/\/embed\/([^/?]+)/);
+  return match ? match[1] : null;
+};
+// console.log(extractVideoId("https://www.youtube.com/embed/cqSx86VTLYY"));
 const LandingPage = () => {
   return (
     <div className="landingPage">
@@ -74,7 +81,8 @@ const LandingPage = () => {
         <div className="aboutTNT">
           <div className="aboutTNTTextVideo">
             <p className="aboutText">
-              Tamil Nadu's temples, the soul of Tamil culture and the core of
+              {sectionContent.body.value.document.children[0].children[0].value}
+              {/* Tamil Nadu's temples, the soul of Tamil culture and the core of
               Tamil spiritual ethos, are being suffocated to death. A vicious
               policy of seizing control over temples to take over their land and
               revenue was begun by the East India Company, 200 years ago. <br />
@@ -84,7 +92,7 @@ const LandingPage = () => {
               <br />
               Powerfully consecrated temples are losing their vibrance and
               crumbling, causing enormous pain to crores of devotees and
-              communities. <br />
+              communities. <br /> */}
               <br />
             </p>
             <div className="tntVideo">
@@ -96,64 +104,24 @@ const LandingPage = () => {
       </div>
 
       <div className="stateData">
-        <h1 className="stateDataTitle">Dire State of Tamil Temples</h1>
+        <h1 className="stateDataTitle">
+          {data.data.allLandingPages[0].body[2].sectionContent[0].titleText}
+        </h1>
         <div className="state-block">
-          <div className="templeBlock">
-            <div className="img">
-              <img src="https://static.consciousplanet.org/static/assets/img/Natraj_6 1.png" />
-            </div>
-            <div className="templeData">
-              <div className="number">1200</div>
-              <div className="name">Sacred ancient idols</div>
-              <div className="text">stolen in 25 years</div>
-            </div>
-          </div>
-          <div className="templeBlock">
-            <div className="img">
-              <img src="https://static.consciousplanet.org/static/assets/img/11,999_3 1.png" />
-            </div>
-            <div className="templeData">
-              <div className="number">11,999</div>
-              <div className="name">temples dying</div>
-              <div className="text">with no Pooja conducted at all</div>
-            </div>
-          </div>
-          <div className="templeBlock">
-            <div className="img">
-              <img src="https://static.consciousplanet.org/static/assets/img/37000_2 2.png" />
-            </div>
-            <div className="templeData">
-              <div className="number">37,000</div>
-              <div className="name">temples have just one person</div>
-              <div className="text">
-                to handle all activities-pooja, maintenance, security etc.
+          {data.data.allLandingPages[0].body[2].sectionContent[1].card.map(
+            (card, i) => (
+              <div key={i} className="templeBlock">
+                <div className="img">
+                  <img src={card.thumbnail.url} />
+                </div>
+                <div className="templeData">
+                  <div className="number">{card.title}</div>
+                  <div className="name">{card.shortText}</div>
+                  <div className="text">{card.description.value.document.children[0].children[0].value}</div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div className="templeBlock">
-            <div className="img">
-              <img src="https://static.consciousplanet.org/static/assets/img/34000_5 1.png" />
-            </div>
-            <div className="templeData">
-              <div className="number">34,000</div>
-              <div className="name">temples struggling</div>
-              <div className="text">
-                to survive with less than Rs. 10,000 income a year
-              </div>
-            </div>
-          </div>
-          <div className="templeBlock">
-            <div className="img">
-              <img src="https://static.consciousplanet.org/static/assets/img/East_india 1.png" />
-            </div>
-            <div className="templeData">
-              <div className="number">East India Company’s</div>
-              <div className="name">policy of grabbing temples</div>
-              <div className="text">
-                still continues 74 years after Independence
-              </div>
-            </div>
-          </div>
+            )
+          )}
         </div>
       </div>
       <div className="postSec" style={{}}>
@@ -166,25 +134,6 @@ const LandingPage = () => {
         </div>
       </div>
 
-      {/* <div className="storiesSec">
-        <h1>Heartbreaking Stories of Temple Decay</h1>
-        <p>
-          Incredibly, it is not just small, unknown temples that are in decay.
-          Large, popular temples visited by lakhs of devotees every month are
-          targets of theft and victims of neglect.
-        </p>
-        <div className="templeCard">
-          <img
-            src="https://static.consciousplanet.org/static/assets/img/bg-graphics.jpg"
-            alt=""
-            style={{ height: "20px", width: "20px" }}
-          />
-          <h1 className="templeName">Kapaleeshwarar Temple</h1>
-          <p className="aboutTemple">
-            A sacred idol representing goddess Parvati was stolen and replaced
-          </p>
-        </div>
-      </div> */}
       <div
         className="storySec"
         style={{ paddingBottom: "20px", padding: "20px 50px 20px" }}
@@ -199,106 +148,43 @@ const LandingPage = () => {
                 marginBottom: "10px",
               }}
             >
-              Heartbreaking Stories of Temple Decay
+              {data.data.allLandingPages[0].body[3].sectionContent[0].titleText}
             </div>
             <div
               className="text"
               style={{ maxWidth: "50%", fontSize: "small" }}
             >
-              Incredibly, it is not just small, unknown temples that are in
-              decay. Large, popular temples visited by lakhs of devotees every
-              month are targets of theft and victims of neglect.
+              {
+                data.data.allLandingPages[0].body[3].sectionContent[0]
+                  .titleSubtext
+              }
             </div>
           </div>
           <div className="templeSec">
-            <div className="templeSecImgAndText">
-              <img src="https://static.consciousplanet.org/d-100x100/isha-outreach-images/2021-03/Ekambareswarar 4.jpg" />
-              <div className="templeSecData">
-                <div className="templeSecImgAndTextName">
-                  Kapaleeshwarar Temple:{" "}
+            {data.data.allLandingPages[0].body[3].sectionContent[1].cards.map(
+              (card, i) => (
+                <div key={i} className="templeSecImgAndText">
+                  <img width={"35%"} src={card.image.url} />
+                  <div className="templeSecData">
+                    <div className="templeSecImgAndTextName">{card.title}</div>
+                    <div className="templeSecImgAndTextText">
+                      <p>
+                        {
+                          card.description.value.document.children[0]
+                            .children[0].value
+                        }
+                      </p>
+                      <span
+                        className="ReadMore"
+                        style={{ color: "#c05a1b", fontWeight: "bold" }}
+                      >
+                        Read more &gt;
+                      </span>
+                    </div>
+                  </div>
                 </div>
-                <div className="templeSecImgAndTextText">
-                  <p>
-                    A sacred idol representing goddess Parvati was stolen and
-                    replaced with a fake. HR&amp;CE department told the court
-                    that verification documents were
-                  </p>
-                  <span
-                    className="ReadMore"
-                    style={{ color: "#c05a1b", fontWeight: "bold" }}
-                  >
-                    Read more &gt;
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div className="templeSecImgAndText">
-              <img src="https://static.consciousplanet.org/d-100x100/isha-outreach-images/2021-03/Ekambareswarar 4.jpg" />
-              <div className="templeSecData">
-                <div className="templeSecImgAndTextName">
-                  Kapaleeshwarar Temple:{" "}
-                </div>
-                <div className="templeSecImgAndTextText">
-                  <p>
-                    A sacred idol representing goddess Parvati was stolen and
-                    replaced with a fake. HR&amp;CE department told the court
-                    that verification documents were
-                  </p>
-                  <span
-                    className="ReadMore"
-                    style={{ color: "#c05a1b", fontWeight: "bold" }}
-                  >
-                    Read more &gt;
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div className="templeSecImgAndText">
-              <img src="https://static.consciousplanet.org/d-100x100/isha-outreach-images/2021-03/Ekambareswarar 4.jpg" />
-              <div className="templeSecData">
-                <div className="templeSecImgAndTextName">
-                  Kapaleeshwarar Temple:{" "}
-                </div>
-                <div className="templeSecImgAndTextText">
-                  <p>
-                    A sacred idol representing goddess Parvati was stolen and
-                    replaced with a fake. HR&amp;CE department told the court
-                    that verification documents were
-                  </p>
-                  <span
-                    className="ReadMore"
-                    style={{ color: "#c05a1b", fontWeight: "bold" }}
-                  >
-                    Read more &gt;
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div className="templeSecImgAndText">
-              <img src="https://static.consciousplanet.org/d-100x100/isha-outreach-images/2021-03/Ekambareswarar 4.jpg" />
-              <div className="templeSecData">
-                <div className="templeSecImgAndTextName">
-                  Kapaleeshwarar Temple:{" "}
-                </div>
-                <div className="templeSecImgAndTextText">
-                  <p>
-                    A sacred idol representing goddess Parvati was stolen and
-                    replaced with a fake. HR&amp;CE department told the court
-                    that verification documents were
-                  </p>
-                  <span
-                    className="ReadMore"
-                    style={{
-                      color: "#c05a1b",
-                      fontWeight: "bold",
-                      margin: "auto",
-                    }}
-                  >
-                    Read more &gt;
-                  </span>
-                </div>
-              </div>
-            </div>
+              )
+            )}
           </div>
           <div
             className="count"
@@ -308,7 +194,7 @@ const LandingPage = () => {
               marginBottom: "10px",
             }}
           >
-            4/11
+            6/11
           </div>
           <button
             className="loadMoreButton"
@@ -333,37 +219,21 @@ const LandingPage = () => {
             margin: "0 0px 50px 150px",
           }}
         >
-          Sadhguru on #FreeTNTemples
+          {data.data.allLandingPages[0].body[4].sectionContent[0].titleText}
         </h1>
         <div className="templeTalk">
-          <div className="videoDiv">
-            <YoutubeEmbed
-              embedId="zQTJNV11RmA"
-              title="Secular Governments Should Not Control Temples #FreeTNTemples"
-              className="templeTalkVideos"
-            />
-          </div>
-          <div className="videoDiv">
-            <YoutubeEmbed
-              embedId="cqSx86VTLYY"
-              title="Government Can Manage Museums, Not Temples | Sadhguru #FreeTNTemples"
-              className="templeTalkVideos"
-            />
-          </div>
-          <div className="videoDiv">
-            <YoutubeEmbed
-              embedId="mhvxEdOCujo"
-              title="Thousands of Temples Are Dying. Time to Free Tamil Nadu Temples | #FreeTNTemples"
-              className="templeTalkVideos"
-            />
-          </div>
-          <div className="videoDiv">
-            <YoutubeEmbed
-              embedId="lua5F0T3m70"
-              title="Free Hindu Temples From Govt Control"
-              className="templeTalkVideos"
-            />
-          </div>
+          {data.data.allLandingPages[0].body[4].sectionContent[1].card
+            .slice(0, 4)
+            .map((card, i) => (
+              <div className="videoDiv">
+                <YoutubeEmbed
+                  key={i}
+                  embedId={extractVideoId(card.linkUrl)}
+                  title={card.shortText}
+                  className="templeTalkVideos"
+                />
+              </div>
+            ))}
         </div>
         <div className="loadMore" style={{ marginTop: "30px" }}>
           <div
@@ -374,7 +244,8 @@ const LandingPage = () => {
               marginBottom: "10px",
             }}
           >
-            4/11
+            4 /
+            {data.data.allLandingPages[0].body[4].sectionContent[1].card.length}
           </div>
           <button
             className="loadMoreButton"
@@ -388,7 +259,6 @@ const LandingPage = () => {
           </button>
         </div>
       </div>
-
       <div className="appealSec">
         <div
           className="title"
@@ -400,59 +270,37 @@ const LandingPage = () => {
             padding: "50px 390px 0 0 ",
           }}
         >
-          An Appeal to Tamil Nadu's Political <br />{" "}
-          <span style={{}}>Leaders</span>
+          {data.data.allLandingPages[0].body[5].sectionContent[0].titleText}{" "}
+          <br /> <span style={{}}></span>
         </div>
         <div className="apealLatters" style={{ margin: "10px 100px" }}>
-          <div
-            className="letterCard"
-            style={{ marginBottom: "90px", padding: "10px" }}
-          >
-            <div
-              className="latterHeading"
-              style={{ marginBottom: "20px", padding: "10px" }}
-            >
-              An Appeal to <br />
-              Shri Edappadi K Palaniswami
-            </div>
-            <div className="img">
-              <a
-                href="https://static.consciousplanet.org/static/assets/img/Thiru_Edapaddi_Palaniswami_Avargale_April_2_2021.pdf"
-                target="_blank"
+          {data.data.allLandingPages[0].body[5].sectionContent[1].fileList.map(
+            (file, i) => (
+              <div
+                key={i}
+                className="letterCard"
+                style={{ marginBottom: "90px", padding: "10px" }}
               >
-                <img src="https://static.consciousplanet.org/static/assets/img/letter1_1.jpg" />
-              </a>
-            </div>
-          </div>
-          <div
-            className="letterCard"
-            style={{ marginBottom: "90px", padding: "10px" }}
-          >
-            <div
-              className="latterHeading"
-              style={{ marginBottom: "20px", padding: "10px" }}
-            >
-              An Appeal to <br />
-              Shri M K Stalin
-            </div>
-            <div className="img">
-              <a
-                href="https://static.consciousplanet.org/static/assets/img/Thiru_Stalin_Avargale_April_2_2021.pdf"
-                target="_blank"
-              >
-                <img src="https://static.consciousplanet.org/static/assets/img/letter2_1.jpg" />
-              </a>
-            </div>
-          </div>
+                <div
+                  className="latterHeading"
+                  style={{ marginBottom: "20px", padding: "10px" }}
+                >
+                  {file.fileTitle}
+                </div>
+                <div className="img">
+                  <img src={file.thumbnail.url} />
+                </div>
+              </div>
+            )
+          )}
         </div>
       </div>
-
       <div className="hRAndCeSec">
         <div
           className="title"
           style={{ fontSize: "30px", fontWeight: "bold", color: "brown" }}
         >
-          HR&amp;CE Act: Colonial Origins &amp; History
+          {data.data.allLandingPages[0].body[6].sectionContent[0].titleText}
         </div>
         <div
           className="timelineBlock"
@@ -462,71 +310,27 @@ const LandingPage = () => {
             textAlign: "left",
           }}
         >
-          <div className="years">
-            <div className="img" style={{ width: "110px" }}>
-              <img src="https://static.consciousplanet.org/static/assets/img/1817.png" />
-            </div>
-            <div className="content">
-              East India Company introduces The Madras Regulation VII to bring
-              temples under company control, targeting lands and wealth donated
-              by devotees.{" "}
-            </div>
-          </div>
-          <div className="years">
-            <div className="img">
-              <img src="https://static.consciousplanet.org/static/assets/img/1925.png" />
-            </div>
-            <div className="content">
-              The Madras Religious and Charitable Endowments Act is introduced
-              to bring all religious institutions under government control. The
-              act draws massive protests from Muslims and Christians.
-            </div>
-          </div>
-          <div className="years">
-            <div className="img">
-              <img src="https://static.consciousplanet.org/static/assets/img/1927.png" />
-            </div>
-            <div className="content">
-              The act is redrafted as Madras Hindu Religious and Endowments Act,
-              and made applicable only to Hindu places of worship.
-            </div>
-          </div>
-          <div className="years">
-            <div className="img">
-              <img src="https://static.consciousplanet.org/static/assets/img/1947.png" />
-            </div>
-            <div className="content bold" style={{ fontWeight: "bolder" }}>
-              Govt. Control Continues in Independent India{" "}
-            </div>
-          </div>
-          <div className="years">
-            <div className="img">
-              <img src="https://static.consciousplanet.org/static/assets/img/1951.png" />
-            </div>
-            <div className="content">
-              The state government takes control of temples and their funds by
-              the Hindu Religious and Charitable Endowments Act. Many provisions
-              of the act are struck down by the High Court &amp; Supreme Court
-              as unacceptable.{" "}
-            </div>
-          </div>
-          <div className="years">
-            <div className="img">
-              <img src="https://static.consciousplanet.org/static/assets/img/1959.png" />
-            </div>
-            <div className="content">
-              Scant attention is paid to the courts’ objections and the Tamil
-              Nadu Hindu Religious and Charitable Endowments Act is passed.
-            </div>
-          </div>
+          {data.data.allLandingPages[0].body[6].sectionContent[1].timelines.map(
+            (e, i) => (
+              <div key={i} className="years">
+                <div className="img" style={{ width: "110px" }}>
+                  <img src={e.thumbnail.url} />
+                </div>
+                <div className="content">
+                  {e.description.value.document.children[0].children[0].value}
+                </div>
+              </div>
+            )
+          )}
         </div>
         <div
           className="note"
           style={{ marginTop: "80px", fontStyle: "italic" }}
         >
-          Today, over 38,000 temples, mutts and similar organizations are under
-          the control of the Tamil Nadu Hindu Religious and Charitable
-          Endowments Department.{" "}
+          {
+            data.data.allLandingPages[0].body[6].sectionContent[2].body.value
+              .document.children[0].children[0].value
+          }
         </div>
       </div>
       {/* 
@@ -590,7 +394,6 @@ const LandingPage = () => {
           />
         </div>
       </div> */}
-
       <div className="getInTouchSec">
         <div
           className=""
@@ -667,19 +470,24 @@ const LandingPage = () => {
           </form>
         </div>
       </div>
-
-      <div className="footerSec" style={{ display: "flex", color: "white", height:"40px",alignItems:"center"}}>
-        <p
-         style={{fontSize:"15px"}}
-        >
+      <div
+        className="footerSec"
+        style={{
+          display: "flex",
+          color: "white",
+          height: "40px",
+          alignItems: "center",
+        }}
+      >
+        <p style={{ fontSize: "15px" }}>
           Copyright ©2023 Thenkailaya Bakthi Peravai
         </p>
         <div
           className="footer-blog"
-          style={{ display: "flex", marginLeft: "500px",fontSize:"15px" }}
+          style={{ display: "flex", marginLeft: "500px", fontSize: "15px" }}
         >
-          <p style={{marginRight:"20px"}}>Privacy</p>
-          <p style={{marginLeft:"20px"}}>Terms and Conditions</p>
+          <p style={{ marginRight: "20px" }}>Privacy</p>
+          <p style={{ marginLeft: "20px" }}>Terms and Conditions</p>
         </div>
       </div>
     </div>
