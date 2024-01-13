@@ -1,0 +1,11 @@
+@media only screen and (max-width: 768px){
+    .youtubeVideo iframe{
+        height: 265px;
+        width: 320px;
+    }
+}
+@media only screen and (max-width: 768px){
+    .youtubeVideo p{
+        width: 45%;
+    }
+}
