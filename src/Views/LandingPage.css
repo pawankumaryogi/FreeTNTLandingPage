@@ -1,6 +1,81 @@
 .landingPage {
     justify-content: center;
     text-align: center;
+
+}
+
+.topBannerContainer {
+    width: 1400px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+@media only screen and (max-width: 768px) {
+    .topBannerContainer {
+        width: 100%;
+        height: 500px;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .playButton {
+        display: none;
+    }
+}
+
+.topBannerImg {
+    width: 100%;
+}
+
+
+.topBannerText {
+    position: absolute;
+    top: 100px;
+    left: 10%;
+    margin: auto;
+
+    /* text-align: left; */
+    font-size: x-large;
+    font-weight: bolder;
+    /* transform: translate(-50%, -50%); */
+}
+
+@media only screen and (max-width: 768px) {
+    .topBannerText {
+        position: absolute;
+        /* top: 0; */
+        /* left: 0; */
+        margin: 0;
+        padding: 0;
+        /* text-align: left; */
+        font-size: x-large;
+        font-weight: bolder;
+        /* transform: translate(-50%, -50%); */
+    }
+}
+
+.topBannerText h2 {
+    font-size: 50px;
+    font-weight: 500;
+    text-align: left;
+}
+
+@media only screen and (max-width: 768px) {
+    .topBannerText h2 {
+        font-size: 30px;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .topBannerText p {
+        font-size: 20px;
+    }
 }
 
 .sec2 {
@@ -9,45 +84,168 @@
     background-image: url(https://static.consciousplanet.org/static/assets/img/bg-graphics.jpg);
 }
 
-.content {
-    margin-left: 130px;
-    margin-top: -90px;
+@media only screen and (max-width: 768px) {
+    .sec2 {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        /* margin: auto; */
+        background-image: url(https://static.consciousplanet.org/static/assets/img/bg-graphics.jpg);
+    }
 }
 
-.youtubeVideosSec {
-    width: 1400px;
-    margin: auto;
-    background-image: url(https://static.consciousplanet.org/static/assets/img/bg-graphics.jpg);
-
+.aboutTNT {
+    display: flex;
+    height: 80vh;
+    align-items: center;
 }
 
-.youtubeVideosSec h1 {
-    color: black;
-    font-size: 35px;
-    font-weight: bold;
+@media only screen and (max-width: 768px) {
+    .aboutTNT {
+        width: 100%;
+        display: flex;
+        height: 100%;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.aboutTNTTextVideo {
+    width: 50%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
     text-align: left;
-    padding-top: 70px;
-    margin: 0 0 50px 150px;
+    margin-left: 150px;
+
+}
+
+@media only screen and (max-width: 768px) {
+    .aboutTNTTextVideo {
+        width: 100%;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        margin-left: 0px;
+
+    }
+}
+
+.aboutText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin: auto; */
+}
+
+
+.stateData {
+
+    width: 1400px;
+    padding-bottom: 55px;
+    margin: auto;
+    background-image: url(https://static.consciousplanet.org/static/assets/img/4498733907_858c1a0945_o%20copy%202@2x.jpg);
+}
+
+@media only screen and (max-width: 768px) {
+    .stateData {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        padding-bottom: 55px;
+        margin: auto;
+        background-image: url(https://static.consciousplanet.org/static/assets/img/4498733907_858c1a0945_o%20copy%202@2x.jpg);
+    }
+}
+
+.stateDataTitle {
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    padding-top: 35px;
 }
 
 @media only screen and (max-width:768px) {
-    .youtubeVideosSec h1 {
-        color: black;
-        font-size: 35px;
+    .stateDataTitle {
+        width: 100%;
+        font-size: 30px;
         font-weight: bold;
-        text-align: left;
-        width: 25%;
-        padding-top: 70px;
-        margin: 0 0 50px 50px;
+        color: white;
+        padding-top: 35px;
+        margin-left: 80px;
+    }
+}
+
+.stateDataTitle {
+    max-width: 50%;
+
+}
+
+
+.templeCard {
+    height: 50px;
+    width: 80px;
+}
+
+
+.templeBlock {
+    display: flex;
+    max-width: 65%;
+    margin-left: 90px;
+    padding-top: 35px;
+}
+
+@media only screen and (max-width:768px) {
+    .templeBlock {
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+        margin-left: 50px;
+        padding-top: 35px;
+    }
+}
+
+.templeData {
+    display: flex;
+    flex-direction: column;
+    margin: auto 30px auto;
+    align-items: flex-start;
+    max-width: 50%;
+}
+
+@media only screen and (max-width:768px) {
+    .templeData {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        align-items: flex-start;
+        max-width: 100%;
     }
 }
 
 .postSec {
+
     width: 1400px;
     height: 540px;
     margin: auto;
     display: flex;
     background-image: url(https://static.consciousplanet.org/static/assets/img/bg-graphics.jpg);
+
+}
+
+@media only screen and (max-width:768px) {
+    .postSec {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        display: flex;
+        background-image: url(https://static.consciousplanet.org/static/assets/img/bg-graphics.jpg);
+
+    }
 
 }
 
@@ -64,8 +262,8 @@
     .postSecData {
         /* display: flex; */
         /* flex-direction: column; */
-        width: 20%;
-        margin-left: 50px;
+        width: 100%;
+        margin-left: 5px;
         /* margin:auto */
         /* justify-content: center; */
     }
@@ -84,20 +282,80 @@
     /* margin: auto; */
 }
 
+.storySec {
+    width: 1400px;
+    margin: auto;
+    background-image: url(https://static.consciousplanet.org/static/assets/img/4498733907_858c1a0945_o%20copy%202@2x.jpg);
+    padding: 20px 50px 20px
+}
+
+@media only screen and (max-width:768px) {
+    .storySec {
+        width: 100%;
+        margin: 0;
+        background-image: url(https://static.consciousplanet.org/static/assets/img/4498733907_858c1a0945_o%20copy%202@2x.jpg);
+        padding: 0;
+    }
+}
+
+.storySecTitle h1 {
+    color: white;
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 10px
+}
+
+.storySecTitle div {
+    color: white;
+    max-width: 100%;
+    font-size: small
+}
+
+/* @media only screen and (max-width:768px) {
+    .storySecTitle div {}
+} */
+
+@media only screen and (max-width:768px) {
+    .storySecTitle h1 {
+        font-size: 30px;
+        font-weight: 500;
+        max-width: 100%;
+        margin-bottom: 10px
+    }
+}
+
+.storySecTitle {
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 80px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+@media only screen and (max-width:768px) {
+    .storySecTitle {
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 80px;
+        margin-bottom: 20px;
+        padding: 20px;
+    }
+
+}
+
+.templeSecImgAndTextName {
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+
 .templeSecImgAndTextName {
     text-align: left;
     padding: 0 10px;
-}
-
-.ReadMore {
-    color: #ea8500;
-}
-
-.videoDiv {
-    background-color: white;
-    padding: 0px 0 10px;
-    text-align: left;
-
 }
 
 .templeSecImgAndText {
@@ -110,6 +368,135 @@
     /* text-align: left; */
     padding: 0px 10px;
 }
+
+.text {
+    font-size: 15px;
+    color: white;
+}
+
+.templeSecImgAndTextText {
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+    overflow: hidden;
+    /* height: 90px; */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.templeSecImgAndText img {
+    width: 35%;
+}
+
+@media only screen and (max-width:768px) {
+    .templeSecImgAndText img {
+        width: 100vh;
+    }
+}
+@media only screen and (max-width:768px) {
+    .count {
+     
+        display: none;
+    }
+}
+
+.templeSecImgAndText {
+    width: 1400px;
+    margin: auto;
+    display: flex;
+    max-width: 50%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    padding: 20px 20px 20px 10px;
+    margin-bottom: 20px;
+    margin-left: 80px;
+}
+
+@media only screen and (max-width:768px) {
+    .templeSecImgAndText {
+        width: 100%;
+        margin-bottom: 5px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        /* margin: auto;
+       padding: auto; */
+
+
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .templeSec{
+    width: 125%;
+   
+    }
+    
+}
+
+
+.youtubeVideosSec {
+    width: 1400px;
+    margin: auto;
+    background-image: url(https://static.consciousplanet.org/static/assets/img/bg-graphics.jpg);
+
+}
+
+@media only screen and (max-width:768px) {
+    .youtubeVideosSec {
+        width: 100%;
+        margin: auto;
+        background-image: url(https://static.consciousplanet.org/static/assets/img/bg-graphics.jpg);
+        margin: 0;
+        padding: 0;
+    }
+
+}
+
+.youtubeVideosSec h1 {
+    color: black;
+    font-size: 35px;
+    font-weight: bold;
+    text-align: left;
+    padding-top: 70px;
+    margin: 0 0 50px 150px;
+}
+
+@media only screen and (max-width:768px) {
+    .youtubeVideosSec h1 {
+        color: black;
+        font-size: 30px;
+        font-weight: bold;
+        text-align: left;
+        width: 80%;
+        padding-top: 70px;
+        margin: 0 0 15px 55px;
+    }
+}
+
+
+
+.ReadMore {
+    color: #ea8500;
+}
+
+.videoDiv {
+    background-color: white;
+    padding: 0px 0 10px;
+    text-align: left;
+
+}
+@media only screen and (max-width:768px) {
+    .videoDiv {
+        background-color: white;
+        padding: 0px 0 0x;
+        text-align: left;
+    
+    }
+
+}
+
 
 .loadMoreButton {
     background-color: #764324;
@@ -130,9 +517,9 @@
 
 @media only screen and (max-width:768px) {
     .loadMoreButton {
-        /* width: 25%; */
+        /* width: 100%; */
         /* margin: auto; */
-        margin-left: 50px;
+        margin-left: 90px;
         /* align-items: flex-start; */
         /* display: block; */
         /* margin-left: 10px; */
@@ -147,23 +534,23 @@
 
 @media only screen and (max-width:768px) {
     .loadMore button {
-        margin-left: 100px;
+        /* margin-left: 100px; */
     }
 }
 
 @media only screen and (max-width:768px) {
     .appealSec h1 {
-        width: 50%;
+        width: 100%;
         margin-left: 15px;
     }
 }
 
 .appealSec h1 {
     color: white;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: bolder;
     text-align: center;
-    padding: 50px 390px 0 0;
+    padding: 10px;
 }
 
 .appealSec {
@@ -175,26 +562,46 @@
     background-color: #764324;
 }
 
-.pastGlorySec {
-    float: left;
-    width: 100%;
-    background-color: #040404;
-    padding-left: 150px;
-    padding-right: 644px;
-    padding-top: 60px;
-    padding-bottom: 90px;
-    background-image: url(https://static.consciousplanet.org/static/assets/img/bg-img.jpg);
+@media only screen and (max-width:768px) {
+    .appealSec {
+        width: 100%;
+        /* margin: auto; */
+        /* float: left; */
+        /* width: 100%; */
+        margin: 0;
+        padding: 0;
+        background-color: #764324;
+    }
+
 }
 
-.footerSec {
-    float: left;
-    width: 100%;
-    background-color: #000;
-    padding-top: 22px;
-    padding-right: calc((100% - 1110px) / 2);
-    padding-left: calc((100% - 1110px) / 2);
-    padding-bottom: 22px;
+.apealLatters {
+    display: flex;
+    margin: 10px 100px;
 }
+
+@media only screen and (max-width:768px) {
+    .apealLatters {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+
+    }
+}
+
+.latterHeading {
+    font-size: medium;
+    font-weight: bold;
+    color: white;
+}
+
+@media only screen and (max-width:768px) {
+    .latterHeading {
+        display: flex;
+        width: 100%;
+    }
+}
+
 
 .hRAndCeSec {
     width: 1400px;
@@ -208,6 +615,88 @@
     background-image: url(https://static.consciousplanet.org/static/assets/img/bg-graphics.jpg);
 
 }
+
+@media only screen and (max-width:768px) {
+
+    .hRAndCeSec {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        /* float: left; */
+        /* width: 100%; */
+        padding-left: 15px;
+        padding-right: 10px;
+        padding-top: 40px;
+        padding-bottom: 10px;
+        background-image: url(https://static.consciousplanet.org/static/assets/img/bg-graphics.jpg);
+
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .hRAndCeSec h1 {
+        width: 100%;
+
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .hRAndCeSec {
+        margin-left: 5px;
+
+    }
+}
+
+.years {
+
+    padding-top: 90px;
+    /* justify-content: flex-start; */
+    /* align-items: center; */
+}
+
+@media only screen and (max-width:768px) {
+    .years {
+
+        padding-top: 10px;
+        margin: 0;
+        padding: 0;
+        /* justify-content: flex-start; */
+        /* align-items: center; */
+    }
+}
+
+@media only screen and (max-width:768px) {
+    #templeHistoryDes {
+        width: 55%;
+    }
+}
+@media only screen and (max-width:768px) {
+    .storySecLoadMoreButton {
+        margin: 20px;
+        padding: 10px;
+    }
+}
+
+.content {
+    margin-left: 130px;
+    margin-top: -90px;
+}
+
+
+
+/* .pastGlorySec {
+    float: left;
+    width: 100%;
+    background-color: #040404;
+    padding-left: 150px;
+    padding-right: 644px;
+    padding-top: 60px;
+    padding-bottom: 90px;
+    background-image: url(https://static.consciousplanet.org/static/assets/img/bg-img.jpg);
+} */
+
+
+
 
 .getInTouchSec {
     width: 1400px;
@@ -233,7 +722,7 @@
 
 @media only screen and (max-width:768px) {
     .getInTouchSec h1 {
-        width: 40%;
+        width: 100%;
         color: white;
         font-size: 30px;
         font-weight: bolder;
@@ -243,35 +732,24 @@
 
 @media only screen and (max-width:768px) {
     .getInTouchSec {
-        padding-left:50px;
-        padding-right: 630px;
-        padding-top: 60px;
-        padding-bottom: 30px;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+
     }
 }
 
-@media only screen and (max-width:768px) {
-    .footerSec {
-        float: left;
-        width: 1400px;
-        /* background-color: #000; */
-        /* padding-top: 22px; */
-        /* padding-right: calc((100% - 1110px) / 2);
-        padding-left: calc((100% - 1110px) / 2); */
-        /* padding-bottom: 22px; */
-    }
-}
 
 @media only screen and (max-width:768px) {
     .getInTouchSec p {
-        width: 40%;
+        width: 100%;
 
     }
 }
 
 @media only screen and (max-width:768px) {
     .formBlock {
-        width: 35%;
+        width: 100%;
 
     }
 }
@@ -284,43 +762,23 @@
 }
 
 @media only screen and (max-width:768px) {
+    .termsAndConditionsText {
+        display: none;
+    }
+
+}
+
+@media only screen and (max-width:768px) {
+    .privacyText {
+        display: none;
+    }
+
+}
+
+@media only screen and (max-width:768px) {
     .formBlock select {
         width: 100%;
 
-    }
-}
-
-
-.apealLatters {
-    display: flex;
-    margin: 10px 100px;
-}
-
-@media only screen and (max-width:768px) {
-    .apealLatters {
-        display: flex;
-        flex-direction: column;
-        margin: 0;
-    }
-}
-
-@media only screen and (max-width:768px) {
-    .hRAndCeSec h1 {
-        width: 45%;
-
-    }
-}
-
-@media only screen and (max-width:768px) {
-    .hRAndCeSec {
-        margin-left: -105px;
-
-    }
-}
-
-@media only screen and (max-width:768px) {
-    #templeHistoryDes {
-        width: 25%;
     }
 }
 
@@ -337,19 +795,45 @@
     border-radius: 5px;
 }
 
-.years {
+@media only screen and (max-width:768px) {
+    .inputClass {
 
-    padding-top: 90px;
-    /* justify-content: flex-start; */
-    /* align-items: center; */
+        width: 100%;
+        height: 50px;
+        margin-bottom: 15px;
+        padding-left: 20px;
+        border-radius: 5px;
+    }
 }
 
 
 
-
-.topBannerImg {
+.footerSec {
+    float: left;
     width: 100%;
+    background-color: #000;
+    padding-top: 22px;
+    padding-right: calc((100% - 1110px) / 2);
+    padding-left: calc((100% - 1110px) / 2);
+    padding-bottom: 22px;
 }
+
+@media only screen and (max-width:768px) {
+    .footerSec {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        float: none;
+        /* background-color: #000; */
+        /* padding-top: 22px; */
+        /* padding-right: calc((100% - 1110px) / 2);
+        padding-left: calc((100% - 1110px) / 2); */
+        /* padding-bottom: 22px; */
+    }
+}
+
 
 .wordLimit {
 
@@ -359,46 +843,6 @@
 
 }
 
-.topBannerContainer {
-    width: 1400px;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    color: white;
-    /* background-image: url(https://www.datocms-assets.com/109266/1703672985-free-temple-banner.jpg); */
-
-
-}
-
-.topBannerText {
-    position: absolute;
-    top: 164px;
-    left: 12%;
-    margin: auto;
-
-    /* text-align: left; */
-    font-size: x-large;
-    font-weight: bolder;
-    /* transform: translate(-50%, -50%); */
-}
-
-.topBannerText h2 {
-    font-size: 50px;
-    font-weight: 500;
-    text-align: left;
-}
-
-@media only screen and (max-width: 768px) {
-    .topBannerText h2 {
-        font-size: 30px;
-    }
-}
-
-.aboutTNT {
-    display: flex;
-    height: 80vh;
-    align-items: center;
-}
 
 .templeTalk {
     width: 50%;
@@ -409,6 +853,11 @@
     /* Adjust the gap as needed */
 }
 
+.templeTalk iframe {
+    width: 100%;
+    height: 100%;
+}
+
 @media only screen and (max-width:768px) {
     .templeTalk {
         width: 50%;
@@ -416,110 +865,8 @@
         grid-template-columns: repeat(1, 1fr);
         grid-gap: 50px;
         margin-left: 15px;
-        /* Adjust the gap as needed */
     }
 
-}
-
-/* Assuming each YoutubeEmbed has a fixed aspect ratio */
-.templeTalk iframe {
-    width: 100%;
-    height: 100%;
-}
-
-.aboutTNTTextVideo {
-    width: 50%;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    margin-left: 150px;
-
-}
-
-@media only screen and (max-width: 768px) {
-    .aboutTNTTextVideo {
-        width: 25%;
-        justify-content: center;
-        display: flex;
-        flex-direction: column;
-        text-align: left;
-        margin-left: 10px;
-
-    }
-}
-
-
-.aboutText {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* margin: auto; */
-}
-
-/* .supportCard {
-    position: fixed;
-    height: 447px;
-    width: 416px;
-    background-color: rgb(255, 255, 255);
-    margin-left: 900px;
-    margin-bottom: 1000px;
-    margin-top: 100px;
-} */
-
-.templeCard {
-    height: 50px;
-    width: 80px;
-}
-
-.stateData {
-    width: 1400px;
-    padding-bottom: 55px;
-    margin: auto;
-    background-image: url(https://static.consciousplanet.org/static/assets/img/4498733907_858c1a0945_o%20copy%202@2x.jpg);
-}
-
-.stateDataTitle {
-    font-size: 30px;
-    font-weight: bold;
-    color: white;
-    padding-top: 35px;
-}
-
-@media only screen and (max-width:768px) {
-    .stateDataTitle {
-        width: 20%;
-        font-size: 30px;
-        font-weight: bold;
-        color: white;
-        padding-top: 35px;
-        margin-left: 10px;
-    }
-}
-
-.templeBlock {
-    display: flex;
-    max-width: 65%;
-    margin-left: 90px;
-    padding-top: 35px;
-}
-
-@media only screen and (max-width:768px) {
-    .templeBlock {
-        display: flex;
-        flex-direction: column;
-        max-width: 65%;
-        margin-left: 50px;
-        padding-top: 35px;
-    }
-}
-
-.templeData {
-    display: flex;
-    flex-direction: column;
-    margin: auto 30px auto;
-    align-items: flex-start;
-    max-width: 50%;
 }
 
 .number {
@@ -534,152 +881,8 @@
     color: white;
 }
 
-.templeSecImgAndTextName {
-    font-size: 20px;
-    font-weight: bold;
-    color: rgb(0, 0, 0);
-}
-
-.text {
-    font-size: 15px;
-    color: white;
-}
-
-.templeSecImgAndTextText {
-    font-size: 15px;
-    color: rgb(0, 0, 0);
-    overflow: hidden;
-    /* height: 90px; */
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-}
-
-.templeSecImgAndText img {
-    width: 35%;
-}
-
-@media only screen and (max-width:768px) {
-    .templeSecImgAndText img {
-      width: 100vh;
-    }
-}
-
-.stateDataTitle {
-    max-width: 50%;
-
-}
-
-.storeSecTitle h1 {
-    color: white;
-    font-size: 30px;
-    font-weight: 500;
-    margin-bottom: 10px
-}
-
-.storeSecTitle div {
-    color: white;
-    max-width: 50%;
-    font-size: small
-}
-
-@media only screen and (max-width:768px) {
-    .storeSecTitle div {
-        display: none;
-    }
-}
-
-@media only screen and (max-width:768px) {
-    .storeSecTitle h1 {
-        font-size: 30px;
-        font-weight: 500;
-        max-width: 17%;
-        margin-bottom: 10px
-    }
-}
-
-@media only screen and (max-width:768px) {
-    .latterHeading {
-        display: flex;
-        width: 24%;
-
-        /* flex-direction: column; */
-    }
-}
-
-/* @media only screen and (max-width:768px) {
-    .storySec {
-        padding: 0;
-        margin: 0;
-
-        /* flex-direction: column; */
-/* }
-} */
-
-
-
-.latterHeading {
-    font-size: medium;
-    font-weight: bold;
-    color: white;
-}
-.storySec {
-    width: 1400px;
-    margin: auto;
-    background-image: url(https://static.consciousplanet.org/static/assets/img/4498733907_858c1a0945_o%20copy%202@2x.jpg);
-    padding: 20px 50px 20px
-}
-
-.templeSecImgAndText {
-    width: 1400px;
-    margin: auto;
-    display: flex;
-    max-width: 50%;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(255, 255, 255);
-    padding: 20px 20px 20px 10px;
-    margin-bottom: 20px;
-    margin-left: 80px;
-
-
-}
-
-@media only screen and (max-width:768px) {
-    .templeSecImgAndText {
-        /* width: 1400px;
-        margin: auto; */
-        display: flex;
-        flex-direction: column;
-        /* max-width: 22%; */
-        /* justify-content: center;
-        align-items: center;
-        background-color: rgb(255, 255, 255);
-        padding: 20px 20px 20px 10px;
-        margin-bottom: 20px;
-        margin-left: 80px; */
-
-
-    }
-}
-@media only screen and (max-width:768px) {
-    .storySec {
-       display: none;
-    }
-}
-
 .ReadMore {
     display: flex;
     justify-content: end;
     color: #5d2a08;
-}
-
-.storeSecTitle {
-
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-left: 80px;
-    margin-bottom: 20px;
-    padding: 20px;
 }

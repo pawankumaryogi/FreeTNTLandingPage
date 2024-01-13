@@ -25,7 +25,6 @@ const LandingPage = () => {
     <div className="landingPage">
       <div className="topBannerContainer">
         <img
-          style={{ width: "1400px" }}
           className="topBannerImg"
           src={topBannerImg}
           alt=""
@@ -56,7 +55,7 @@ const LandingPage = () => {
           >
             Click Here to support
           </button>{" "}
-          <img
+          <img className="playButton"
             src="https://static.consciousplanet.org/static/assets/img/play-icon.svg"
             alt=""
             style={{ marginLeft: "500px", marginTop: "-150px" }}
@@ -68,24 +67,13 @@ const LandingPage = () => {
           <div className="aboutTNTTextVideo">
             <p className="aboutText">
               {sectionContent.body.value.document.children[0].children[0].value}
-              {/* Tamil Nadu's temples, the soul of Tamil culture and the core of
-              Tamil spiritual ethos, are being suffocated to death. A vicious
-              policy of seizing control over temples to take over their land and
-              revenue was begun by the East India Company, 200 years ago. <br />
-              <br />
-              Unfortunately, the same policy of government control over temples
-              continues today, 74 years after Independence. <br />
-              <br />
-              Powerfully consecrated temples are losing their vibrance and
-              crumbling, causing enormous pain to crores of devotees and
-              communities. <br /> */}
               <br />
             </p>
             <div className="tntVideo">
               <YoutubeEmbed embedId="KHkxs7Cnwp4" />
             </div>
           </div>
-          <SupportCard />
+          {/* <SupportCard /> */}
         </div>
       </div>
 
@@ -127,7 +115,7 @@ const LandingPage = () => {
 
       <div className="storySec" style={{}}>
         <div className="">
-          <div className="storeSecTitle">
+          <div className="storySecTitle">
             <h1 className="name">
               {data.data.allLandingPages[0].body[3].sectionContent[0].titleText}
             </h1>
@@ -175,11 +163,11 @@ const LandingPage = () => {
             6/11
           </div>
           <button
-            className="loadMoreButton"
+            className="storySecLoadMoreButton"
             style={{
               backgroundColor: "beige",
               color: "black",
-              marginLeft: "300px",
+              marginLeft: "0px",
             }}
           >
             LOAD MORE

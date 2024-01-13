@@ -1,4 +1,4 @@
-.head{
+.head {
     float: left;
     align-items: center;
     display: flex;
@@ -13,19 +13,39 @@
     left: 0;
     z-index: 9;
 }
-.head li a{
-   color: white;
+
+@media only screen and (max-width:768px) {
+    .head {
+
+        width: 100%;
+
+    }
 
 }
-.menuBlock{
+@media only screen and (max-width:768px) {
+    .storySecLoadMoreButton {
+
+        width: 100%;
+       margin: 0;
+    }
+
+}
+
+.head li a {
+    color: white;
+
+}
+
+.menuBlock {
     display: flex;
     list-style: none;
 }
-.menu{
+
+.menu {
     padding-left: 20px;
 }
 
-.langBlock{
+.langBlock {
     float: right;
     width: auto;
     border: 1px solid #ffffff;
@@ -34,5 +54,5 @@
     color: white;
     margin-left: 400px;
     padding: 5px 15px 5px 15px;
-   align-items: center;
+    align-items: center;
 }
