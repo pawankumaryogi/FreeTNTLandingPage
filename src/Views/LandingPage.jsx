@@ -32,22 +32,8 @@ const LandingPage = () => {
         />
 
         <div className="topBannerText">
-          <h2
-            style={{ fontSize: "50px", fontWeight: "500", textAlign: "left" }}
-          >
-            Free Tamil Nadu's
-          </h2>
-          <p
-            style={{
-              fontSize: "50px",
-              fontWeight: "500",
-              textAlign: "left",
-              marginTop: "-25px",
-            }}
-          >
-            Temples
-          </p>{" "}
-          <br />
+          <h2>Free Tamil Nadu's</h2>
+          <h2>Temples</h2> <br />
           <p style={{ fontWeight: "normal", textAlign: "left" }}>
             Show your support to
           </p>
@@ -117,7 +103,12 @@ const LandingPage = () => {
                 <div className="templeData">
                   <div className="number">{card.title}</div>
                   <div className="name">{card.shortText}</div>
-                  <div className="text">{card.description.value.document.children[0].children[0].value}</div>
+                  <div className="text">
+                    {
+                      card.description.value.document.children[0].children[0]
+                        .value
+                    }
+                  </div>
                 </div>
               </div>
             )
@@ -125,7 +116,7 @@ const LandingPage = () => {
         </div>
       </div>
       <div className="postSec" style={{}}>
-        <div className="postSecData" style={{ display: "flex", width: "70%" }}>
+        <div className="postSecData" style={{}}>
           <h1 className="postSecTitle">
             Why We Should Free Tamil Nadu's <br /> Temples
           </h1>
@@ -134,26 +125,13 @@ const LandingPage = () => {
         </div>
       </div>
 
-      <div
-        className="storySec"
-        style={{ paddingBottom: "20px", padding: "20px 50px 20px" }}
-      >
+      <div className="storySec" style={{}}>
         <div className="">
           <div className="storeSecTitle">
-            <div
-              className="name"
-              style={{
-                fontSize: "30px",
-                fontWeight: "500",
-                marginBottom: "10px",
-              }}
-            >
+            <h1 className="name">
               {data.data.allLandingPages[0].body[3].sectionContent[0].titleText}
-            </div>
-            <div
-              className="text"
-              style={{ maxWidth: "50%", fontSize: "small" }}
-            >
+            </h1>
+            <div className="text" style={{}}>
               {
                 data.data.allLandingPages[0].body[3].sectionContent[0]
                   .titleSubtext
@@ -164,7 +142,7 @@ const LandingPage = () => {
             {data.data.allLandingPages[0].body[3].sectionContent[1].cards.map(
               (card, i) => (
                 <div key={i} className="templeSecImgAndText">
-                  <img width={"35%"} src={card.image.url} />
+                  <img src={card.image.url} />
                   <div className="templeSecData">
                     <div className="templeSecImgAndTextName">{card.title}</div>
                     <div className="templeSecImgAndTextText">
@@ -178,7 +156,7 @@ const LandingPage = () => {
                         className="ReadMore"
                         style={{ color: "#c05a1b", fontWeight: "bold" }}
                       >
-                        Read more &gt;
+                        {/* Read more &gt; */}
                       </span>
                     </div>
                   </div>
@@ -209,23 +187,14 @@ const LandingPage = () => {
         </div>
       </div>
       <div className="youtubeVideosSec" style={{ paddingBottom: "50px" }}>
-        <h1
-          style={{
-            color: "black",
-            fontSize: "35px",
-            fontWeight: "bold",
-            textAlign: "left",
-            paddingTop: "70px",
-            margin: "0 0px 50px 150px",
-          }}
-        >
+        <h1 style={{}}>
           {data.data.allLandingPages[0].body[4].sectionContent[0].titleText}
         </h1>
         <div className="templeTalk">
           {data.data.allLandingPages[0].body[4].sectionContent[1].card
             .slice(0, 4)
             .map((card, i) => (
-              <div className="videoDiv">
+              <div key={i} className="videoDiv">
                 <YoutubeEmbed
                   key={i}
                   embedId={extractVideoId(card.linkUrl)}
@@ -236,7 +205,7 @@ const LandingPage = () => {
             ))}
         </div>
         <div className="loadMore" style={{ marginTop: "30px" }}>
-          <div
+          <h3
             className="count"
             style={{
               color: "black",
@@ -246,34 +215,18 @@ const LandingPage = () => {
           >
             4 /
             {data.data.allLandingPages[0].body[4].sectionContent[1].card.length}
-          </div>
-          <button
-            className="loadMoreButton"
-            style={{
-              backgroundColor: "#c05a1b",
-              color: "white",
-              marginLeft: "370px",
-            }}
-          >
+          </h3>
+          <button className="loadMoreButton" style={{}}>
             LOAD MORE
           </button>
         </div>
       </div>
       <div className="appealSec">
-        <div
-          className="title"
-          style={{
-            color: "white",
-            fontSize: "30px",
-            fontWeight: "bolder",
-            textAlign: "center",
-            padding: "50px 390px 0 0 ",
-          }}
-        >
+        <h1 className="title" style={{}}>
           {data.data.allLandingPages[0].body[5].sectionContent[0].titleText}{" "}
           <br /> <span style={{}}></span>
-        </div>
-        <div className="apealLatters" style={{ margin: "10px 100px" }}>
+        </h1>
+        <div className="apealLatters" style={{  }}>
           {data.data.allLandingPages[0].body[5].sectionContent[1].fileList.map(
             (file, i) => (
               <div
@@ -296,12 +249,12 @@ const LandingPage = () => {
         </div>
       </div>
       <div className="hRAndCeSec">
-        <div
+        <h1
           className="title"
-          style={{ fontSize: "30px", fontWeight: "bold", color: "brown" }}
+          style={{ fontSize: "30px", fontWeight: "bold", color: "black" }}
         >
           {data.data.allLandingPages[0].body[6].sectionContent[0].titleText}
-        </div>
+        </h1>
         <div
           className="timelineBlock"
           style={{
@@ -316,7 +269,7 @@ const LandingPage = () => {
                 <div className="img" style={{ width: "110px" }}>
                   <img src={e.thumbnail.url} />
                 </div>
-                <div className="content">
+                <div className="content" id="templeHistoryDes">
                   {e.description.value.document.children[0].children[0].value}
                 </div>
               </div>
@@ -395,31 +348,20 @@ const LandingPage = () => {
         </div>
       </div> */}
       <div className="getInTouchSec">
-        <div
-          className=""
-          style={{
-            color: "white",
-            fontSize: "25px",
-            fontWeight: "bold",
-            paddingBottom: "20px",
-          }}
-        >
-          Get in touch
-        </div>
-        <div
+        <h1>Get in touch</h1>
+        <p
           className="subtitle"
           style={{ color: "white", paddingBottom: "30px" }}
         >
           Want to stay connected with the campaign?
-        </div>
-        <div className="form-block">
+        </p>
+        <div className="formBlock">
           <form
             name="getInvolvedForm"
             id="getInvolvedForm"
             action=""
             method="post"
             acceptCharset="utf-8"
-            target="_blank"
           >
             <div className="formInput">
               <input
@@ -479,15 +421,15 @@ const LandingPage = () => {
           alignItems: "center",
         }}
       >
-        <p style={{ fontSize: "15px" }}>
+        <p className="copyRightText" style={{ fontSize: "15px" }}>
           Copyright ©2023 Thenkailaya Bakthi Peravai
         </p>
         <div
-          className="footer-blog"
+          className="footerBlog"
           style={{ display: "flex", marginLeft: "500px", fontSize: "15px" }}
         >
-          <p style={{ marginRight: "20px" }}>Privacy</p>
-          <p style={{ marginLeft: "20px" }}>Terms and Conditions</p>
+          <p className="privacyText" style={{ marginRight: "20px" }}>Privacy</p>
+          <p className="termsAndConditionsText" style={{ marginLeft: "20px" }}>Terms and Conditions</p>
         </div>
       </div>
     </div>
