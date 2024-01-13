@@ -73,7 +73,7 @@ const LandingPage = () => {
               <YoutubeEmbed embedId="KHkxs7Cnwp4" />
             </div>
           </div>
-          {/* <SupportCard /> */}
+          <SupportCard className="supportCard"/>
         </div>
       </div>
 

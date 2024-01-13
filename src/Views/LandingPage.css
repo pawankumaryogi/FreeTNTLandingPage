@@ -71,6 +71,11 @@
         padding: 0;
     }
 }
+@media only screen and (max-width: 768px) {
+    .supportCard{
+        display: none;
+    }
+}
 
 @media only screen and (max-width: 768px) {
     .topBannerText p {

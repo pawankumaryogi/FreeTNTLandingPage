@@ -31,14 +31,8 @@ const Navbar = () => {
           </li>
         </ul>
         <div className="langBlock">
-          <a href="/en/free-tamilnadu-temples" className="active">
-            <span style={{color:"#febd2c"}}>
-              English 
-            </span> &nbsp;| 
-          </a>
-          <a href="/ta/free-tamilnadu-temples" className="">
-          &nbsp; Tamil
-          </a>
+          <p style={{ color: "#febd2c" }}>English</p> &nbsp;|
+          <p className="">&nbsp; Tamil</p>
         </div>
       </div>
     </header>
