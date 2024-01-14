@@ -13,7 +13,19 @@
     left: 0;
     z-index: 9;
 }
+.menuIcon{
+    display: none;
+}
+@media only screen and (max-width:768px) {
+    .menuIcon{
+        display: flex;
+        color: white;
+        padding: 10px;
+        margin-right: 290px;
+        
+    }
 
+}
 @media only screen and (max-width:768px) {
     .head {
         float: left;
@@ -51,6 +63,7 @@
     .langBlock {
         display: flex;
         float: right;
+        margin-top: -40px;
         width: auto;
         border: 1px solid #ffffff;
         border-radius: 40px;

@@ -254,7 +254,7 @@ const LandingPage = () => {
           {data.data.allLandingPages[0].body[6].sectionContent[1].timelines.map(
             (e, i) => (
               <div key={i} className="years">
-                <div className="img" style={{ width: "110px" }}>
+                <div className="img" style={{ width: "110px",paddingTop:"45px" }}>
                   <img src={e.thumbnail.url} />
                 </div>
                 <div className="content" id="templeHistoryDes">

@@ -5,6 +5,7 @@ const Navbar = () => {
     <header>
       <div className="head">
         <ul className="menuBlock">
+          <div className="menuIcon">MENU</div>
           <li className="menu">
             <a href="#temple-dying" className="">
               {" "}
