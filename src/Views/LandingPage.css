@@ -604,6 +604,12 @@
 
     }
 }
+@media only screen and (max-width:768px) {
+    .letterCard {
+       margin-left: 25px;
+
+    }
+}
 
 .latterHeading {
     font-size: medium;
@@ -750,7 +756,7 @@
     .getInTouchSec {
         width: 100%;
         margin: 0;
-        padding: 0;
+        padding: 15px;
 
     }
 }
