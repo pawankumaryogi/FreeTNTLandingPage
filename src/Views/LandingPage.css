@@ -48,7 +48,7 @@
     .topBannerText {
         position: absolute;
         /* top: 0; */
-        /* left: 0; */
+        left: 10%;
         margin: 0;
         padding: 0;
         /* text-align: left; */
@@ -80,6 +80,33 @@
 @media only screen and (max-width: 768px) {
     .topBannerText p {
         font-size: 20px;
+    }
+}
+.callMobile{
+    display: none;
+}
+.orMobile{
+    display: none;
+}
+@media only screen and (max-width: 768px) {
+    .callMobile{
+        display: flex;
+        background-color: #febd2c;
+        padding: 0px 30px;
+        border-radius: 5px;
+        color: black;
+        font-size: 15px;
+        font-weight: bold;
+        float: left;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .orMobile{
+        display: block; 
+        margin-right: 50px;
+        
     }
 }
 
@@ -532,9 +559,10 @@
 }
 @media only screen and (max-width:768px) {
     .topBannerButton {
-      
+        font-size: 10px;
         margin: 0;
-        margin-right: 35px;
+        margin-right: 65px;
+        padding: 0;
         
         /* align-items: flex-start; */
         /* display: block; */

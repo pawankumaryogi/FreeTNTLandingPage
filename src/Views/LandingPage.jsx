@@ -24,11 +24,7 @@ const LandingPage = () => {
   return (
     <div className="landingPage">
       <div className="topBannerContainer">
-        <img
-          className="topBannerImg"
-          src={topBannerImg}
-          alt=""
-        />
+        <img className="topBannerImg" src={topBannerImg} alt="" />
 
         <div className="topBannerText">
           <h2>Free Tamil Nadu's</h2>
@@ -55,7 +51,26 @@ const LandingPage = () => {
           >
             Click Here to support
           </button>{" "}
-          <img className="playButton"
+          
+         <p className="orMobile" style={{fontSize:"30px"}}> or <br /></p>
+          <div
+            className="callMobile"
+            style={{
+             
+            }}
+          > 
+            <img
+              src="https://static.consciousplanet.org/static/assets/img/phone.svg"
+              alt="Phone icon"
+              width={"30px"}
+            />
+            <p style={{ fontSize: "25px", color: "#473a3a", padding: "7px" }}>
+              {" "}
+              83000 83000
+            </p>
+          </div>
+          <img
+            className="playButton"
             src="https://static.consciousplanet.org/static/assets/img/play-icon.svg"
             alt=""
             style={{ marginLeft: "500px", marginTop: "-150px" }}
@@ -73,7 +88,7 @@ const LandingPage = () => {
               <YoutubeEmbed embedId="KHkxs7Cnwp4" />
             </div>
           </div>
-          <SupportCard className="supportCard"/>
+          <SupportCard className="supportCard" />
         </div>
       </div>
 
@@ -214,7 +229,7 @@ const LandingPage = () => {
           {data.data.allLandingPages[0].body[5].sectionContent[0].titleText}{" "}
           <br /> <span style={{}}></span>
         </h1>
-        <div className="apealLatters" style={{  }}>
+        <div className="apealLatters" style={{}}>
           {data.data.allLandingPages[0].body[5].sectionContent[1].fileList.map(
             (file, i) => (
               <div
@@ -254,7 +269,10 @@ const LandingPage = () => {
           {data.data.allLandingPages[0].body[6].sectionContent[1].timelines.map(
             (e, i) => (
               <div key={i} className="years">
-                <div className="img" style={{ width: "110px",paddingTop:"45px" }}>
+                <div
+                  className="img"
+                  style={{ width: "110px", paddingTop: "45px" }}
+                >
                   <img src={e.thumbnail.url} />
                 </div>
                 <div className="content" id="templeHistoryDes">
@@ -416,8 +434,12 @@ const LandingPage = () => {
           className="footerBlog"
           style={{ display: "flex", marginLeft: "500px", fontSize: "15px" }}
         >
-          <p className="privacyText" style={{ marginRight: "20px" }}>Privacy</p>
-          <p className="termsAndConditionsText" style={{ marginLeft: "20px" }}>Terms and Conditions</p>
+          <p className="privacyText" style={{ marginRight: "20px" }}>
+            Privacy
+          </p>
+          <p className="termsAndConditionsText" style={{ marginLeft: "20px" }}>
+            Terms and Conditions
+          </p>
         </div>
       </div>
     </div>
