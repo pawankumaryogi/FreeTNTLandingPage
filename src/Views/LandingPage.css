@@ -35,7 +35,7 @@
 .topBannerText {
     position: absolute;
     top: 100px;
-    left: 10%;
+    left: 17%;
     margin: auto;
 
     /* text-align: left; */
@@ -434,7 +434,7 @@
 
 @media only screen and (max-width:768px) {
     .templeSec{
-    width: 125%;
+    width: 100%;
    
     }
     
@@ -517,17 +517,28 @@
     border-radius: 2px;
     background-color: #c05a1b;
     color: white;
-    margin-left: 370px;
+    /* margin-left: 370px; */
 }
 
 @media only screen and (max-width:768px) {
     .loadMoreButton {
         /* width: 100%; */
         /* margin: auto; */
-        margin-left: 90px;
+        /* margin-left: 90px; */
         /* align-items: flex-start; */
         /* display: block; */
         /* margin-left: 10px; */
+    }
+}
+@media only screen and (max-width:768px) {
+    .topBannerButton {
+      
+        margin: 0;
+        margin-right: 35px;
+        
+        /* align-items: flex-start; */
+        /* display: block; */
+        /* margin-left: 10px;
     }
 }
 
@@ -546,7 +557,7 @@
 @media only screen and (max-width:768px) {
     .appealSec h1 {
         width: 100%;
-        margin-left: 15px;
+        margin-left: 0px;
     }
 }
 
@@ -629,8 +640,8 @@
         padding: 0;
         /* float: left; */
         /* width: 100%; */
-        padding-left: 15px;
-        padding-right: 10px;
+        padding-left: 0px;
+        padding-right: 0px;
         padding-top: 40px;
         padding-bottom: 10px;
         background-image: url(https://static.consciousplanet.org/static/assets/img/bg-graphics.jpg);

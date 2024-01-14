@@ -40,7 +40,7 @@ const LandingPage = () => {
             #FreeTNTemples
           </h1>
           <button
-            className=""
+            className="topBannerButton"
             style={{
               backgroundColor: "#febd2c",
               padding: "10px 80px ",
